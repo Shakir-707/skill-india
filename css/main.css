@@ -1,0 +1,375 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@400;600&display=swap');
+:root {
+    --primary-color:#666;
+    --secondary-color:#333;
+    --black-color:#000;
+    --active-color: #DF6E12;
+    --bg-color:#F9F9F9;
+    --bg-white:#fff;
+    --bg-theme: #E6EAF7;
+    --breadcrumb-color:#636363;
+    --shadow: 0px 0px 20px 0px #D1D1D14D;
+    --shadow-header: 0px 0px 10px 0px #0000001A;
+    --border:5px solid #042CB0;
+    --border-small: 1px solid #E6EAF7;
+    --font-size-base: 1rem;
+    --font-size-small:12px;
+    --font-size-madium: 20px;
+    --font-size-large: 22px;
+    --main-font-family: 'Figtree', sans-serif;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 14px;
+}
+body {
+    font-family: var(--main-font-family);
+    font-size: var(--font-size-base);
+    line-height: 16.8px;
+    background-color: var(--bg-color);
+}
+.container {
+    width: 1168px;
+    padding: 0 15px;
+    margin: auto;
+}
+.row {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+.row::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.clear {
+    clear: both;
+}
+/* utility class */
+.ml-5{
+    margin-left: 5px;
+}
+/* Header and Navbar styles */
+header{
+    background-color: var(--bg-white);
+    box-shadow: var(--shadow-header);
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--primary-color);
+    padding: 10px 0;
+  }
+  
+  .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .navbar-menu {
+    list-style: none;
+    display: flex;
+  }
+  
+  .navbar-menu li {
+    margin-right: 20px;
+  }
+  
+  .navbar-menu li a {
+    text-decoration: none;
+    color: var(--primary-color);
+  }
+  .navbar-menu li a.active{
+    color: var(--active-color);
+  }
+  .navbar-menu li a span{
+    display: inline;
+    vertical-align: middle;
+  }
+  .navbar-menu li a span img{
+    width: 18px;
+    height: 15px;
+  }
+  
+  .navbar-menu li a:hover {
+    color: var(--active-color);
+  }
+  .navbar-right {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .navbar-right li {
+    margin-left: 20px;   
+  }
+  .navbar-right li a{
+    text-decoration: none;
+    color: var(--primary-color);
+  }
+  .navbar-right li span img{
+    height: 30px;
+    vertical-align: middle;
+  }
+  
+  /* Navbar toggle button for responsive design */
+  .navbar-toggle {
+    display: none;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  
+  .navbar-icon {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--black-color);
+    margin: 4px 0;
+  }
+  .mob-none {
+    display: inline-block;
+    margin-left: 5px;
+  }
+  .navbar-right li span.mob-none img{
+    height: auto;
+  }
+
+  /* breadcrumb */
+
+  .breadcrumb {
+    padding: 15px 0;
+    margin-top: 5px;
+  }
+  
+  .breadcrumb ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+  }
+  
+  .breadcrumb ul li {
+    display: inline;
+    margin-right: 5px;    
+    font-size: var(--font-size-base);
+    font-weight: 400;
+  }
+  
+  .breadcrumb ul li:last-child {
+    font-weight: 700;
+    color: var(--active-color);
+  }
+  
+  .breadcrumb ul li a {
+    text-decoration: none;
+    color: var(--breadcrumb-color);
+    font-weight: 400;
+    transition: color 0.3s;
+  }
+  .separator {
+    color: var(--breadcrumb-color);
+    margin: 0 5px;
+  }
+
+  /* skill heath */
+
+  .section-heading{
+    margin: 0 0 15px;
+  }
+  .section-heading h1{
+    font-size: var(--font-size-large);
+    color: var(--secondary-color);
+    font-weight: 600;
+    line-height: 26.4px;
+  }
+  .card{
+    background-color: var(--bg-white);
+    padding: 20px;
+    box-shadow: var(--shadow);
+    margin-bottom: 25px;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+  }
+  
+  .skill-heath .grid-item {
+    display: flex;
+    padding: 15px 0;
+  }
+  .skill-heath .icon-holder{
+    margin-right: 15px;
+  }
+  .skill-heath .icon-text p{
+    font-weight: 400;
+    color: var(--breadcrumb-color);
+    margin-bottom: 10px;
+
+  }
+  .skill-heath .icon-text h4{
+    font-weight: 700;
+    color: var(--black-color);
+  }
+
+  /* program aligned */
+  .program-aligned .card{
+    border-radius: 10px;
+    border-left: var(--border);
+  }
+  .program-aligned .section-heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .program-aligned .section-heading h2{
+    font-size: var(--font-size-madium);
+    font-weight: 600;
+    color: var(--black-color);
+    line-height: 24px;
+  }
+  .program-aligned .grid {
+    grid-template-columns: repeat(6, 1fr); 
+  }
+  
+  .program-aligned .grid-item {
+    border: var(--border-small);
+    padding: 15px;
+    border-radius: 5px;
+    background-color: var(--bg-white);
+    box-shadow: var(--shadow);
+  }
+  .circle{
+    background-color: var(--bg-theme);
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-bottom: 15px;
+  }
+  .program-aligned .icon-text h4{
+    color: var(--secondary-color);
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+  .program-aligned .icon-text{
+    width: 90%;
+    height: 55%;
+    overflow: auto;
+  }
+  .program-aligned .icon-text p{
+    font-size: var(--font-size-small);
+    font-weight: 400;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+  }
+  .cta{
+    display: flex;
+    padding-bottom: 10px;
+  }
+  .cta a{
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-weight: 700;
+  }
+  .cta a img{
+    vertical-align: middle;
+  }
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    .row {
+        margin: 0;
+    }
+    .nav-icon{
+        display: flex;
+    }
+    .navbar-menu {
+      display: none;
+      flex-direction: column;
+      background-color: #222;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+    }
+  
+    .navbar-menu.active {
+      display: flex;
+    }
+  
+    .navbar-menu li {
+      margin: 0;
+      text-align: center;
+      padding: 10px 0;
+    }
+  
+    .navbar-toggle {
+      display: block;
+      margin-right: 15px;
+    }
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px 20px;
+      }
+      .program-aligned .grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .program-aligned .icon-text{
+        width: 100%;
+      }
+      .program-aligned .card{
+        border-left: none;
+        border-top: var(--border);
+      }
+      .program-aligned .section-heading h2{
+        font-size: var(--font-size-base);
+        font-weight: 700;
+      }
+      .circle{
+        width: 35px;
+        height: 35px;
+      }
+      .card{
+        padding: 15px 20px;
+      }
+      .section-heading{
+        margin: 0 0 10px;
+      }
+      .section-heading h1{
+        font-size: var(--font-size-madium);
+      }
+      .skill-heath .icon-text p{
+        font-size: var(--font-size-small);
+        margin-bottom: 5px;
+      }
+      .skill-heath .icon-text h4{
+        font-size: var(--font-size-small);
+      }
+      .skill-heath .grid-item{
+        padding: 10px 0;
+      }
+      .mob-none{
+        display: none;
+      }
+  }
+  
