@@ -148,8 +148,8 @@ header {
 
 .navbar-icon {
     display: block;
-    width: 25px;
-    height: 3px;
+    width: 24px;
+    height: 2px;
     background-color: var(--black-color);
     margin: 4px 0;
 }
@@ -361,8 +361,16 @@ header {
         margin-right: 15px;
     }
 
+    .navbar-brand img{
+        height: 24px;
+    }
+
     .navbar-right li{
         margin-left: 10px;
+    }
+
+    .navbar-right li a img{
+        vertical-align: bottom;
     }
 
     .navbar-right li span img{
